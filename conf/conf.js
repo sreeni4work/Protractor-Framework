@@ -7,6 +7,10 @@ var reporter = new HtmlScreenshotReporter({
   captureOnlyFailedSpecs: false
 });
 
+var reporter = new HtmlReporter({
+  baseDirectory: 'tmp/screenshots'
+});
+
 // An example configuration file.
 exports.config = {
   directConnect: true,
@@ -59,7 +63,14 @@ exports.config = {
       resultsDir: 'allure-results'
     }));
     
-  }
+  },
+
+  onPrepare: function() {
+    // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
+    jasmine.getEnv().addReporter(new HtmlReporter({
+       baseDirectory: 'tmp/screenshots'
+    }).getJasmine2Reporter());
+ }
   //HTML Report
        /*
   onComplete: function() {
