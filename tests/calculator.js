@@ -9,6 +9,6 @@ describe('calculator test suite',function()
        homepage.secondNumberInput('30');
        homepage.goClick();
 
-       browser.sleep(3500);
+       browser.sleep(4000);
    })
 })
