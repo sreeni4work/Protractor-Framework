@@ -65,6 +65,10 @@ exports.config = {
     }));
     
   },
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4d8b5396e9b459525a3b69f63b6a876878eaee0c
   onPrepare: function() {
     // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
     jasmine.getEnv().addReporter(new HtmlReporter({
