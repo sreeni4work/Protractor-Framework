@@ -1,15 +1,11 @@
 //HTMl report by Jasmine2 only failed test cases
 var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
-var HtmlReporter = require('protractor-beautiful-reporter');
+
 
 var reporter = new HtmlScreenshotReporter({
   dest: 'target/screenshots',
   filename: 'my-report.html',
   captureOnlyFailedSpecs: false
-});
-
-var reporter = new HtmlReporter({
-  baseDirectory: 'tmp/screenshots'
 });
 
 // An example configuration file.
@@ -65,16 +61,7 @@ exports.config = {
     }));
     
   },
-<<<<<<< HEAD
-=======
-
->>>>>>> 4d8b5396e9b459525a3b69f63b6a876878eaee0c
-  onPrepare: function() {
-    // Add a screenshot reporter and store screenshots to `/tmp/screenshots`:
-    jasmine.getEnv().addReporter(new HtmlReporter({
-       baseDirectory: 'tmp/screenshots'
-    }).getJasmine2Reporter());
- }
+  
   //HTML Report
        /*
   onComplete: function() {
